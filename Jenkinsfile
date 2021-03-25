@@ -1,19 +1,25 @@
 pipeline{
-agent any
-environment{
-value = "build"
-value2 = "test"
-value3 = "deploye"}
-stages(){
+  agent any
+  environment{
+       value = "build"
+       value2 = "test"
+       value3 = "deploye"}
+ stages{
 
-stage('build'){
-echo "$VALUE"
+     stage('build'){
+	  steps{
+        echo "$VALUE"
+		}
 }
-stage('test'){
-echo "$VALUE2"
+     stage('test'){
+	  steps{
+        echo "$VALUE2"
+		}
 }
-stage('deploye'){
-echo "$VALUE3"
-}
-}
+     stage('deploye'){
+	  steps{
+        echo "$VALUE3"
+		}
+   }
+ }
 }
