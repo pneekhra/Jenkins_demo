@@ -4,7 +4,8 @@ environment{
 value = "build"
 value2 = "test"
 value3 = "deploye"}
-stages{
+stages(){
+
 stage('build'){
 echo "$VALUE"
 }
