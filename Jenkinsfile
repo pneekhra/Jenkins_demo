@@ -1,8 +1,9 @@
 pipeline{
 agent any
-def value = build
-def value2 = test
-def value3 = deploye
+environment{
+value = build
+value2 = test
+value3 = deploye}
 stages{
 stage('build'){
 echo "$VALUE"
